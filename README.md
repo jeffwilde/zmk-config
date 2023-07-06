@@ -4,4 +4,4 @@
 
 [Edit the layout](https://nickcoutsos.github.io/keymap-editor/) using the [keymap-editor](https://github.com/nickcoutsos/keymap-editor/) webapp.
 
-
+![layout preview](preview.svg "layout preview")
