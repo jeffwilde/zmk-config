@@ -4,8 +4,7 @@
 
 [Edit the layout](https://nickcoutsos.github.io/keymap-editor/) using the [keymap-editor](https://github.com/nickcoutsos/keymap-editor) webapp.
 
-![layout preview](preview.svg "layout preview")
-
+![](svg/corneish_zen.svg "corneish zen layout")
 
 A few of interesting related projects:
 - [xMK](https://github.com/manna-harbour/xmk): run ZMK virtualized (in linux) with any keyboard.
