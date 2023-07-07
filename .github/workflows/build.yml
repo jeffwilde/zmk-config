@@ -1,5 +1,38 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+-*'
 
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: firmware
+
+      - name: Generate Release Notes
+        run: |
+          echo "Layouts in this release:" > release_notes.md
+          for file in svg/*.svg; do
+            filename=$(basename -- "$file")
+            base="${filename%.*}"
+            echo "![]($file \"$base layout\")" >> release_notes.md
+          done
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          release_name: ${{ github.ref }}
+          body_path: release_notes.md
+          files: |
+            svg/*
+            firmware/*
