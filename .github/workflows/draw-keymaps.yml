@@ -1,0 +1,33 @@
+name: Update Keymap SVGs
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+
+jobs:
+  is_update_needed:
+    runs-on: ubuntu-latest
+    outputs:
+      trigger: ${{ steps.check_paths.outputs.trigger }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check paths for changes
+        id: paths
+        run: |
+          echo "changed=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^config/.*\.(keymap|dtsi)$' || echo false)" >> "$GITHUB_OUTPUT"
+
+  update:
+    permissions:
+      contents: write
+    needs: is_update_needed
+    if: needs.check_paths.outputs.changed != 'false'
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    with:
+      keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
+      config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
+      output_folder: "svg"                      # path to save produced SVGs
+      parse_args: ""  # map of extra args to pass to `keymap parse`, e.g. "corne:'-l Def Lwr Rse' cradio:''"
+      draw_args: ""   # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"
+      commit_message: "Update Keymap SVGs"
