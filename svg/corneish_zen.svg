@@ -379,8 +379,7 @@ path.combo {
 <g class="layer-MGMT">
 <text x="30.0" y="1019.9592008768392" class="label">MGMT:</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="1070.959200876839" width="52.0" height="52.0" class="key"/>
-<text x="58.0" y="1096.959200876839" class="tap">
-<tspan x="58.0" dy="-0.6em">BT</tspan><tspan x="58.0" dy="1.2em">CLR</tspan></text>
+<text x="58.0" y="1096.959200876839" class="tap" style="font-size: 70%">&amp;sys_reset</text>
 <rect rx="6.0" ry="6.0" x="88.0" y="1070.959200876839" width="52.0" height="52.0" class="key"/>
 <text x="114.0" y="1096.959200876839" class="tap">
 <tspan x="114.0" dy="-0.6em">BT</tspan><tspan x="114.0" dy="1.2em">0</tspan></text>
@@ -402,10 +401,18 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="704.0" y="1056.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="760.0" y="1070.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="816.0" y="1070.959200876839" width="52.0" height="52.0" class="key"/>
+<text x="842.0" y="1096.959200876839" class="tap" style="font-size: 70%">&amp;sys_reset</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="1126.959200876839" width="52.0" height="52.0" class="key"/>
+<text x="58.0" y="1152.959200876839" class="tap" style="font-size: 64%">&amp;bootloader</text>
 <rect rx="6.0" ry="6.0" x="88.0" y="1126.959200876839" width="52.0" height="52.0" class="key"/>
+<text x="114.0" y="1152.959200876839" class="tap">
+<tspan x="114.0" dy="-0.6em">BT</tspan><tspan x="114.0" dy="1.2em">CLR</tspan></text>
 <rect rx="6.0" ry="6.0" x="144.0" y="1112.959200876839" width="52.0" height="52.0" class="key"/>
+<text x="170.0" y="1138.959200876839" class="tap">
+<tspan x="170.0" dy="-0.6em">OUT</tspan><tspan x="170.0" dy="1.2em">USB</tspan></text>
 <rect rx="6.0" ry="6.0" x="200.0" y="1105.959200876839" width="52.0" height="52.0" class="key"/>
+<text x="226.0" y="1131.959200876839" class="tap">
+<tspan x="226.0" dy="-0.6em">OUT</tspan><tspan x="226.0" dy="1.2em">BLE</tspan></text>
 <rect rx="6.0" ry="6.0" x="256.0" y="1112.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="312.0" y="1119.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="536.0" y="1119.959200876839" width="52.0" height="52.0" class="key"/>
@@ -414,6 +421,7 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="704.0" y="1112.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="760.0" y="1126.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="816.0" y="1126.959200876839" width="52.0" height="52.0" class="key"/>
+<text x="842.0" y="1152.959200876839" class="tap" style="font-size: 64%">&amp;bootloader</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="1182.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="88.0" y="1182.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="144.0" y="1168.959200876839" width="52.0" height="52.0" class="key"/>
@@ -426,8 +434,8 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="704.0" y="1168.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="760.0" y="1182.959200876839" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="816.0" y="1182.959200876839" width="52.0" height="52.0" class="key"/>
-<text x="842.0" y="1208.959200876839" class="tap">QWERTY</text>
 <rect rx="6.0" ry="6.0" x="228.0" y="1226.807200876839" width="52.0" height="52.0" class="key"/>
+<text x="254.0" y="1252.807200876839" class="tap">QWERTY</text>
 <g transform="rotate(15.0, 315.59999999999997, 1261.039200876839)">
 <rect rx="6.0" ry="6.0" x="289.59999999999997" y="1235.039200876839" width="52.0" height="52.0" class="key"/>
 </g>
@@ -441,5 +449,6 @@ path.combo {
 <rect rx="6.0" ry="6.0" x="558.4" y="1235.039200876839" width="52.0" height="52.0" class="key"/>
 </g>
 <rect rx="6.0" ry="6.0" x="620.0" y="1226.807200876839" width="52.0" height="52.0" class="key"/>
+<text x="646.0" y="1252.807200876839" class="tap">QWERTY</text>
 </g>
 </svg>
