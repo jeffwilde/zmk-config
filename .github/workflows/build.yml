@@ -32,7 +32,6 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          release_name: ${{ github.ref }}
           body_path: release_notes.md
           files: |
             svg/*
