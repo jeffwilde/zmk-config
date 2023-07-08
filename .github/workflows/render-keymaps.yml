@@ -7,7 +7,7 @@ jobs:
   render:
     permissions:
       contents: write
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    uses: ./.github/workflows/draw-zmk.yml
     with:
       keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
       config_path: "keymap_drawer.config.yaml"  # config file, ignored if not exists
